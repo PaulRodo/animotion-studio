@@ -1,0 +1,21 @@
+name: AniMotion checks
+on:
+  push:
+  pull_request:
+jobs:
+  basic-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Python server
+        run: python -m py_compile run_server.py
+      - name: Check app assets
+        run: |
+          test -s index.html
+          test -s README.md
+          grep -q 'RTX 2050' README.md
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
