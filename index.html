@@ -154,7 +154,7 @@
       <li>Запусти генерацию. Каждый план отправляется отдельно; результат появится под соответствующим номером.</li>
     </ol>
     <div class="notice">Не скачивай десятки гигабайт моделей наугад. Сначала проверь точные требования модели к VRAM, RAM, версии Python и ComfyUI. Не открывай порты 8090/8188 в интернет и не загружай неизвестные workflow.</div>
-    <button class="btn primary" data-screen="prompt" onclick="document.querySelector('[data-screen=prompt]').click()">Открыть генератор</button>
+    <button class="btn primary" id="goToGenerator">Открыть генератор</button>
   </div></div>
   <div class="panel"><div class="ph"><h2>Смежные инструменты</h2></div><div class="body">
     <div class="card"><b>Motion Lab</b><p>Собирает монтаж из уже готовых изображений: движение камеры, переходы, титры и экспорт WebM. Это монтажный инструмент, не text-to-video.</p></div>
@@ -458,7 +458,7 @@ $('description').addEventListener('input',()=>{clearTimeout(window._saveTimer);w
 $('sceneTitle').addEventListener('input',()=>{clearTimeout(window._titleTimer);window._titleTimer=setTimeout(read,250)});
 $('save').onclick=save;$('saveScene').onclick=()=>{read();toast('Параметры сцены сохранены')};$('addScene').onclick=addScene;$('addScene2').onclick=addScene;$('makePrompt').onclick=renderPrompt;$('copyPrompt').onclick=()=>copy($('promptOutput').textContent);$('downloadPrompt').onclick=()=>{renderPrompt();download('animotion-scene-prompt.txt',$('promptOutput').textContent)};$('export').onclick=()=>{read();download('animotion-project.json',JSON.stringify(project,null,2),'application/json')};$('import').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{try{const p=JSON.parse(await e.target.files[0].text());if(!Array.isArray(p.scenes)||!p.scenes.length)throw Error();project=p;current=0;$('projectName').value=project.name||'';fill();renderAll();save()}catch(err){toast('Файл проекта не распознан')}e.target.value=''};
 $('addCharacter').onclick=()=>{const name=prompt('Имя персонажа:');if(!name)return;const description=prompt('Опиши постоянную внешность, одежду и особенности персонажа:')||'';project.characters.push({name,description});renderCharacters();save()};
-$('checkComfy').onclick=check;$('openComfy').onclick=()=>window.open('http://127.0.0.1:8188','_blank','noopener');$('generateLocal').onclick=generate;
+$('checkComfy').onclick=check;$('openComfy').onclick=()=>window.open('http://127.0.0.1:8188','_blank','noopener');$('generateLocal').onclick=generate;$('goToGenerator').onclick=()=>document.querySelector('.nav [data-screen="prompt"]').click();
 
 let motionClips=[],motionRaf=null,motionExportTimer=null,motionRecorder=null,motionStream=null,motionBlobUrl=null,motionPreviewStart=0,motionExportStart=0,motionChunks=[];
 const motionCanvas=$('motionCanvas'),motionCtx=motionCanvas.getContext('2d');
