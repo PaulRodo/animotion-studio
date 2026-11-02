@@ -26,7 +26,7 @@ class ProjectFilesTest(unittest.TestCase):
         self.assertIn("promptCity", html)
         self.assertIn("promptOcean", html)
         self.assertIn("animotion-prompt-animation.webm", html)
-        self.assertIn("procedural", html.lower())
+        self.assertIn("процедурн", html.lower())
 
     def test_low_vram_guidance_present(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
