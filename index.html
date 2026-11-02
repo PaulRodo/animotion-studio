@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#10131d">
-<title>AniMotion Studio 0.5</title>
+<title>AniMotion Studio 0.6</title>
 <style>
 :root{color-scheme:dark;--bg:#0d1018;--panel:#151b28;--panel2:#1c2433;--line:#2b3548;--txt:#f4f6fb;--muted:#9ba8bd;--violet:#a78bfa;--mint:#68e1d1;--good:#8de0b6;--warn:#efd18d;--bad:#ff9ba9;font-family:Inter,system-ui,"Segoe UI",Arial,sans-serif}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -10%,#29264a 0,transparent 38%),var(--bg);color:var(--txt);min-height:100vh}button,input,textarea,select{font:inherit}button{cursor:pointer;color:inherit}.app{max-width:1600px;margin:auto;min-height:100vh;display:grid;grid-template-columns:230px minmax(0,1fr)}aside{padding:22px 15px;border-right:1px solid var(--line);background:#10141eee;display:flex;flex-direction:column;gap:22px}.brand{display:flex;align-items:center;gap:10px;padding:2px 8px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#a78bfa,#68e1d1);display:grid;place-items:center;color:#111827;font-weight:900;font-size:20px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.navlabel{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#78859b;padding:0 10px 8px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;text-align:left;padding:11px;border-radius:10px;color:#b8c3d5}.nav button.active,.nav button:hover{background:#282744;color:white}.nav button.active{box-shadow:inset 3px 0 var(--violet)}.foot{margin-top:auto;border:1px solid #31534d;background:#17333155;border-radius:13px;padding:13px}.foot b{font-size:12px}.foot p{font-size:11px;line-height:1.5;color:#a9bfbd;margin:6px 0 0}.main{min-width:0}.top{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 25px;background:#10141bbd;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.top input{max-width:300px;width:100%;font-size:15px;font-weight:700;color:var(--txt);background:transparent;border:0;outline:0}.top small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.actions{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.pill{border:1px solid #315b4c;color:var(--good);background:#15372d88;padding:6px 9px;border-radius:40px;font-size:10px;white-space:nowrap}.btn{border:1px solid var(--line);border-radius:10px;background:var(--panel2);padding:9px 12px;font-size:12px;font-weight:650}.btn:hover{border-color:#8c79dc}.btn.primary{background:linear-gradient(120deg,#8b71e8,#6d62ce);border-color:transparent}.btn.ghost{background:transparent}.btn:disabled{opacity:.5;cursor:not-allowed}.wrap{max-width:1400px;margin:auto;padding:24px 26px 45px}.screen{display:none}.screen.active{display:block}.heading{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px}.eyebrow{font-size:10px;color:var(--mint);font-weight:800;letter-spacing:1.7px;text-transform:uppercase}.heading h1{font-size:24px;letter-spacing:-.5px;margin:5px 0}.heading p{font-size:12px;color:var(--muted);margin:0}.layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.8fr);gap:16px;align-items:start}.panel{border:1px solid var(--line);border-radius:15px;background:linear-gradient(180deg,#171e2b,#141a25);overflow:hidden;margin-bottom:15px}.ph{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.ph h2{font-size:13px;margin:0}.ph span{font-size:10px;color:var(--muted)}.body{padding:15px;display:grid;gap:13px}.preview{aspect-ratio:16/9;border:1px solid #3b4560;border-radius:12px;position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;background:radial-gradient(ellipse at 65% 45%,#a78bfa55,transparent 26%),radial-gradient(ellipse at 25% 82%,#1cb5a255,transparent 33%),linear-gradient(135deg,#17233b,#111522 56%,#302540)}.preview:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 38px,#ffffff09 39px),repeating-linear-gradient(90deg,transparent 0 38px,#ffffff09 39px)}.orb{width:72px;height:72px;border-radius:50%;margin:0 auto 13px;background:radial-gradient(circle at 32% 28%,white,#d5c8ff 13%,#9e81ff 40%,#423576 75%);box-shadow:0 0 34px #ac90ff99}.preview h2{font-size:clamp(14px,2vw,23px);margin:0;text-shadow:0 3px 18px black}.preview p{font-size:11px;color:#d4d8eb}.preview-content{z-index:1;padding:18px;max-width:80%}.field{display:grid;gap:6px}.field label{font-size:11px;color:#c4ccdc;font-weight:700}.field small,.hint{font-size:10px;color:var(--muted);line-height:1.5}.field input,.field textarea,.field select{width:100%;border:1px solid #344057;background:#0f1420;color:var(--txt);border-radius:9px;padding:10px;font-size:12px;outline:0}.field textarea{min-height:94px;resize:vertical;line-height:1.5}.field input:focus,.field textarea:focus,.field select:focus{border-color:#9a86f4}.row{display:grid;grid-template-columns:1fr 1fr;gap:9px}.notice{padding:11px 13px;border:1px solid #65522e;background:#45351c55;color:var(--warn);border-radius:10px;font-size:11px;line-height:1.5}.list{display:grid;gap:8px;padding:13px}.scene{display:flex;gap:11px;align-items:center;padding:11px;border:1px solid var(--line);border-radius:11px;background:#101725;cursor:pointer}.scene.selected{border-color:#9a86f4;background:#25213a}.thumb{width:75px;height:50px;flex-shrink:0;border-radius:8px;background:linear-gradient(135deg,#293c60,#7660a4);display:grid;place-items:center}.scene b{font-size:12px}.scene p{font-size:10px;color:var(--muted);margin:4px 0 0}.scene .grow{flex:1;min-width:0}.scene p{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gridcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}.card{border:1px solid var(--line);border-radius:12px;padding:13px;background:#111725}.card b{font-size:12px}.card p{font-size:11px;color:var(--muted);line-height:1.5}.status{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#101725;color:var(--muted);font-size:11px;line-height:1.5;overflow-wrap:anywhere}.status.ok{color:var(--good);border-color:#315b4c}.status.bad{color:var(--bad);border-color:#70404a}.status.warn{color:var(--warn);border-color:#65522e}.output{white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid var(--line);background:#0d121c;border-radius:10px;padding:12px;font:11px/1.5 ui-monospace,monospace;max-height:280px;overflow:auto}.video{width:100%;max-height:400px;border-radius:10px;background:#05070b;margin-top:10px}.hide{display:none!important}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,18px);opacity:0;background:#eeeaff;color:#211a3b;padding:10px 14px;border-radius:10px;font-size:12px;z-index:20;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
@@ -36,26 +36,73 @@
 
 @media(max-width:900px){.app{grid-template-columns:64px minmax(0,1fr)}aside{padding:15px 8px;align-items:center}.brand{padding:0}.brand .brandtxt,.navlabel,.navtext,.foot{display:none}.nav button{width:44px;text-align:center;font-size:17px}.layout{grid-template-columns:1fr}.top{padding:0 14px}.wrap{padding:18px 14px 30px}}
 @media(max-width:580px){.app{display:block}aside{height:58px;position:sticky;top:0;z-index:10;border:0;border-bottom:1px solid var(--line);flex-direction:row;justify-content:space-between;padding:6px 10px}.brand{display:none}.nav{display:flex;gap:3px}.nav button{width:auto;padding:9px 11px}.top{height:58px}.pill{display:none}.heading{align-items:flex-start;flex-direction:column}.row{grid-template-columns:1fr}}
+
+.ai-shot-card{margin:0 0 11px}.ai-shot-card .field textarea{min-height:170px;font-size:11px}.ai-result-card{margin-top:11px}.ai-result-card .video{display:block;max-height:360px;object-fit:contain;background:#05070b}.ai-result-card .btn{display:inline-block;margin-top:7px;text-decoration:none}.ai-shot-card>p{font-size:11px;color:var(--muted);line-height:1.5}
 </style>
 </head>
 <body>
 <div class="app">
 <aside>
-  <div class="brand"><div class="logo">✦</div><div class="brandtxt"><b>AniMotion Studio</b><small>версия 0.4 · free edition</small></div></div>
+  <div class="brand"><div class="logo">✦</div><div class="brandtxt"><b>AniMotion Studio</b><small>версия 0.6 · AI scene pipeline</small></div></div>
   <div style="width:100%"><div class="navlabel">Рабочее пространство</div><nav class="nav">
-    <button class="active" data-screen="studio">◈ <span class="navtext">Студия</span></button>
+    <button class="active" data-screen="prompt">✧ <span class="navtext">Генератор AI-сцен</span></button>
+    <button data-screen="studio">◈ <span class="navtext">Студия</span></button>
     <button data-screen="story">▤ <span class="navtext">Раскадровка</span></button>
     <button data-screen="people">♙ <span class="navtext">Персонажи</span></button>
-    <button data-screen="ai">✦ <span class="navtext">ИИ-генерация</span></button>
+    <button data-screen="ai">✦ <span class="navtext">Модели и ПК</span></button>
     <button data-screen="motion">▣ <span class="navtext">Motion Lab</span></button>
-    <button data-screen="prompt">✧ <span class="navtext">По промпту</span></button>
+    <button data-screen="demo">◌ <span class="navtext">Графическое демо</span></button>
   </nav></div>
-  <div class="foot"><b>Бесплатная основа</b><p>Редактор, сцены, промпты и хранение проекта работают локально. Платные API не требуются.</p></div>
+  <div class="foot"><b>Генерация через модель</b><p>Опиши сцену, собери планы и отправь их в подключённый AI-workflow. Никакой имитации нейросети.</p></div>
 </aside>
 <main class="main">
 <header class="top"><div><input id="projectName" value="Мой первый анимационный проект" aria-label="Название проекта"><small>Проект сохраняется в этом браузере</small></div><div class="actions"><span class="pill">● локально · бесплатно</span><button class="btn" id="save">Сохранить</button><button class="btn" id="export">Экспорт JSON</button><button class="btn" id="import">Импорт</button><input id="importFile" type="file" accept=".json,application/json" hidden></div></header>
 <div class="wrap">
-<section id="screen-studio" class="screen active">
+<section id="screen-prompt" class="screen active">
+<div class="heading"><div><div class="eyebrow">Главный рабочий процесс</div><h1>Генератор AI-сцен</h1><p>Один текст → постановочные планы → настоящая генерация подключённой моделью ComfyUI.</p></div><span class="pill">● Mixed · все стили</span></div>
+<div class="prompt-grid">
+  <div>
+    <div class="panel"><div class="ph"><h2>1. Опиши будущий ролик</h2><span>Текст → планы → клипы</span></div><div class="body">
+      <div class="field"><label for="aiPrompt">Что должно происходить в видео?</label><textarea id="aiPrompt" rows="6" placeholder="Например: Молодая исследовательница в красном скафандре выходит из повреждённого корабля на ледяную планету. Ветер поднимает снег, в небе медленно восходит огромное голубое солнце. Героиня замечает вдали светящийся объект и осторожно идёт к нему."></textarea><small>Пиши как режиссёр: кто герой, где он находится, что делает и чем заканчивается действие. Программа сохранит этот замысел во всех планах.</small></div>
+      <div class="field"><label for="aiCharacter">Постоянное описание персонажа (для визуальной согласованности)</label><textarea id="aiCharacter" rows="3" placeholder="Например: одна и та же молодая исследовательница, короткие тёмные волосы, красный скафандр с белыми полосами, шрам над левой бровью; лицо и одежда не меняются между планами."></textarea></div>
+      <div class="row">
+        <div class="field"><label for="aiStyle">Визуальный стиль</label><select id="aiStyle"><option value="mixed" selected>Mixed — смешанный, адаптивный</option><option value="cinematic">Кинематографичный реализм</option><option value="3d">3D-анимация</option><option value="2d">Рисованная 2D-анимация</option><option value="anime">Аниме</option><option value="motion">Motion Graphics</option></select></div>
+        <div class="field"><label for="aiShotCount">Количество планов</label><select id="aiShotCount"><option value="1">1 план</option><option value="2">2 плана</option><option value="3" selected>3 плана</option><option value="4">4 плана</option><option value="5">5 планов</option><option value="6">6 планов</option></select></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="aiRatio">Формат кадра</label><select id="aiRatio"><option value="16:9" selected>16:9 · YouTube</option><option value="9:16">9:16 · Shorts</option><option value="1:1">1:1 · квадрат</option></select></div>
+        <div class="field"><label for="aiDuration">Длительность одного плана</label><select id="aiDuration"><option value="3">3 секунды</option><option value="4" selected>4 секунды</option><option value="5">5 секунд</option><option value="6">6 секунд</option><option value="8">8 секунд</option></select></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="aiCamera">Работа камеры</label><select id="aiCamera"><option value="adaptive" selected>Подобрать под действие</option><option value="dolly">Плавный кинематографичный наезд</option><option value="tracking">Сопровождение героя</option><option value="orbit">Облёт вокруг героя</option><option value="pan">Плавная панорама</option><option value="handheld">Динамичная ручная камера</option></select></div>
+        <div class="field"><label for="aiMotion">Характер движения</label><select id="aiMotion"><option value="natural" selected>Естественное, физически правдоподобное</option><option value="dramatic">Драматичное и выразительное</option><option value="action">Энергичное, динамичное</option><option value="slow">Плавное замедленное</option></select></div>
+      </div>
+      <div class="field"><label for="aiLighting">Свет и атмосфера</label><select id="aiLighting"><option value="cinematic" selected>Кинематографическое освещение</option><option value="natural">Естественный свет</option><option value="dramatic">Контрастный драматичный свет</option><option value="neon">Неоновый / фантастический</option><option value="soft">Мягкий рисованный свет</option></select></div>
+      <div class="field"><label for="aiNegative">Что исключить</label><input id="aiNegative" value="мерцание, дрожание, морфинг лица, изменение одежды и внешности героя, лишние конечности, сломанная анатомия, артефакты, водяные знаки, случайные надписи"></div>
+      <div class="prompt-tools"><button class="btn primary" id="aiPlanButton">✧ Сформировать планы</button><button class="btn" id="aiExportPrompts">⇩ Скачать промпты</button></div>
+      <div class="status warn" id="aiPlanStatus">Сначала опиши ролик и нажми «Сформировать планы». Можно редактировать текст каждого плана до генерации.</div>
+    </div></div>
+    <div class="panel"><div class="ph"><h2>2. План съёмки</h2><span id="aiShotCountLabel">Планы ещё не созданы</span></div><div class="body"><div id="aiShotList"><div class="status">Здесь появится список планов: общий вид, действие героя, крупные детали и финальный кадр.</div></div></div></div>
+  </div>
+  <div>
+    <div class="panel"><div class="ph"><h2>3. Подключи модель и запускай генерацию</h2><span>ComfyUI · локальный сервер</span></div><div class="body">
+      <div class="field"><label for="comfyUrl">Адрес ComfyUI</label><input id="comfyUrl" value="/comfy"><small>Для запуска через start-animotion.bat оставь /comfy. Прокси ведёт на http://127.0.0.1:8188. GitHub Pages не имеет доступа к локальному компьютеру.</small></div>
+      <div class="actions"><button class="btn primary" id="checkComfy">Проверить подключение</button><button class="btn" id="openComfy">Открыть ComfyUI</button></div>
+      <div class="status warn" id="comfyStatus">ComfyUI пока не проверен. Его нужно установить и запустить отдельно.</div>
+      <div class="field"><label for="workflowFile">Загрузить API-workflow (.json)</label><input type="file" id="workflowFile" accept=".json,application/json"><small>В ComfyUI включи Dev Mode → File → Export Workflow (API). Нужен именно API JSON, а не обычный файл графа.</small></div>
+      <div class="row"><div class="field"><label for="positiveNode">ID позитивного текстового узла</label><select id="positiveNode" disabled><option value="">Загрузи workflow</option></select></div><div class="field"><label for="negativeNode">ID негативного узла</label><select id="negativeNode" disabled><option value="">Не выбран</option></select></div></div>
+      <div class="status" id="workflowStatus">Workflow не загружен.</div>
+      <div class="notice">Выбери workflow, который действительно создаёт видео (Text-to-Video или Image-to-Video). Если workflow создаёт только изображения, AniMotion покажет изображения и честно отметит, что движения в них нет.</div>
+      <div class="actions"><button class="btn primary" id="generateLocal" disabled>▶ Сгенерировать все планы</button><button class="btn" id="stopLocal" disabled>■ Остановить</button></div>
+      <div class="status" id="generationStatus">Генерация не запускалась.</div>
+      <div id="generationResult"></div>
+    </div></div>
+    <div class="card"><b>Ограничение твоего ПК</b><p>NVIDIA RTX 2050 с 4 ГБ VRAM не подходит для современных полноценных text-to-video моделей. Вкладка может отправить совместимый workflow, но запуск видеомодели, скорее всего, закончится нехваткой памяти. Сначала проверяй лёгкие workflow на одном коротком плане.</p></div>
+    <div class="card"><b>Что делает AniMotion</b><p>Планировщик сохраняет твой сюжет, добавляет режиссёрскую крупность, камеру, движение и повторяемое описание героя. Само изображение или видео создаёт именно выбранная нейросетевая модель в ComfyUI — не нарисованный шаблон.</p></div>
+  </div>
+</div>
+</section>
+<section id="screen-studio" class="screen">
 <div class="heading"><div><div class="eyebrow">Твоя творческая мастерская</div><h1>Студия анимации</h1><p>Создавай сцены, настраивай визуальный стиль и собирай точные промпты для генерации.</p></div><button class="btn primary" id="addScene">＋ Новая сцена</button></div>
 <div class="layout">
 <div>
@@ -87,27 +134,32 @@
 <div class="gridcards" id="characters"></div>
 </section>
 <section id="screen-ai" class="screen">
-<div class="heading"><div><div class="eyebrow">Локальная генерация</div><h1>ИИ-генерация</h1><p>Подключение к ComfyUI на твоём компьютере — без платной подписки.</p></div></div>
+<div class="heading"><div><div class="eyebrow">Реальные возможности и ограничения</div><h1>Модели и оборудование</h1><p>Проверяй требования конкретной модели до загрузки больших файлов.</p></div></div>
 <div class="layout">
 <div>
-<div class="panel"><div class="ph"><h2>Подключение к ComfyUI</h2><span>Локальный сервер</span></div><div class="body">
-<div class="field"><label for="comfyUrl">Адрес ComfyUI</label><input id="comfyUrl" value="/comfy"><small>Оставь /comfy при запуске через start-animotion.bat. Прокси направляет запросы на 127.0.0.1:8188.</small></div>
-<div class="actions"><button class="btn primary" id="checkComfy">Проверить подключение</button><button class="btn" id="openComfy">Открыть ComfyUI</button></div>
-<div class="status warn" id="comfyStatus">ComfyUI пока не проверен. Сначала установи и запусти ComfyUI отдельно.</div>
-<div class="field"><label for="workflowFile">Загрузить API-workflow (.json)</label><input type="file" id="workflowFile" accept=".json,application/json"><small>В ComfyUI используй Dev Mode → File → Export Workflow (API). Обычный workflow JSON может не подойти.</small></div>
-<div class="row"><div class="field"><label for="positiveNode">ID позитивного текстового узла</label><select id="positiveNode" disabled><option value="">Загрузи workflow</option></select></div><div class="field"><label for="negativeNode">ID негативного узла</label><select id="negativeNode" disabled><option value="">Не выбран</option></select></div></div>
-<div class="status" id="workflowStatus">Workflow не загружен.</div>
-<div class="actions"><button class="btn" id="clearWorkflow">Очистить workflow</button><button class="btn primary" id="generateLocal" disabled>Создать локально</button><button class="btn" id="stopLocal" disabled>Остановить</button></div>
-<div class="status" id="generationStatus">Генерация не запускалась.</div><div id="generationResult"></div>
-</div></div>
+  <div class="panel"><div class="ph"><h2>Текущий компьютер</h2><span>Известная конфигурация</span></div><div class="body">
+    <div class="card"><b>NVIDIA GeForce RTX 2050 · 4 ГБ выделенной VRAM</b><p>Это ограничение относится именно к быстрой выделенной видеопамяти. Общая графическая память Windows не заменяет VRAM видеокарты.</p></div>
+    <div class="notice">Полноценные современные text-to-video модели не являются реалистичной локальной целью для этой конфигурации. Документация LTX для ComfyUI указывает 32 ГБ VRAM, а руководство NVIDIA по своему продвинутому видео-конвейеру указывает 16 ГБ VRAM и рекомендует 64 ГБ системной памяти.</div>
+    <div class="card"><b>Что можно тестировать локально</b><p>Лёгкие text-to-image workflow с малыми разрешениями и offloading, если модель и узлы поддерживают этот режим. Затем — анимацию отдельных изображений или портретов. Скорость и стабильность на RTX 2050 нужно проверять фактическим запуском.</p></div>
+    <div class="card"><b>Что нужно для настоящего text-to-video</b><p>Либо облачный сервис с видеомоделью (обычно аккаунт, API-ключи и платные кредиты), либо значительно более мощный GPU. Универсального бесплатного и неограниченного виде API для подключения в это приложение сейчас нет.</p></div>
+  </div></div>
 </div>
 <div>
-<div class="panel"><div class="ph"><h2>Профиль оборудования</h2><span>Текущая конфигурация</span></div><div class="body">
-<div class="card"><b>NVIDIA GeForce RTX 2050 · 4 ГБ VRAM</b><p>Это мало для современных text-to-video моделей. Начинай с batch 1 и небольшого разрешения. Общая/разделяемая память Windows не равна быстрой выделенной видеопамяти.</p></div>
-<div class="card"><b>Рекомендуемый порядок экспериментов</b><p>1. Анимация готового изображения: панорама, масштабирование, текст и слои.<br>2. Stable Diffusion 1.5 — только изображения, старт 384×384, batch 1, если ComfyUI позволяет low-VRAM/offloading.<br>3. LivePortrait — отдельный короткий тест для переноса мимики/движения на портрет. Не является text-to-video.</p></div>
-<div class="notice">Не начинай с Wan 2.2, Stable Video Diffusion, SDXL или AnimateDiff. Даже облегчённые video-workflow могут не поместиться в 4 ГБ.</div>
-<div class="hint">Для запуска локального сервера используй start-animotion.bat. Он работает только на этом компьютере. Не открывай порты ComfyUI в интернет и не загружай неизвестные workflow.</div>
-</div></div>
+  <div class="panel"><div class="ph"><h2>Как пользоваться генератором</h2></div><div class="body">
+    <ol>
+      <li>Открой «Генератор AI-сцен» и напиши описание сцены.</li>
+      <li>Сформируй планы, проверь и отредактируй промпты.</li>
+      <li>Запусти ComfyUI на своём компьютере.</li>
+      <li>На вкладке генератора загрузи API-workflow, подходящий под установленную модель.</li>
+      <li>Запусти генерацию. Каждый план отправляется отдельно; результат появится под соответствующим номером.</li>
+    </ol>
+    <div class="notice">Не скачивай десятки гигабайт моделей наугад. Сначала проверь точные требования модели к VRAM, RAM, версии Python и ComfyUI. Не открывай порты 8090/8188 в интернет и не загружай неизвестные workflow.</div>
+    <button class="btn primary" data-screen="prompt" onclick="document.querySelector('[data-screen=prompt]').click()">Открыть генератор</button>
+  </div></div>
+  <div class="panel"><div class="ph"><h2>Смежные инструменты</h2></div><div class="body">
+    <div class="card"><b>Motion Lab</b><p>Собирает монтаж из уже готовых изображений: движение камеры, переходы, титры и экспорт WebM. Это монтажный инструмент, не text-to-video.</p></div>
+    <div class="card"><b>Графическое демо</b><p>Показывает процедурные эффекты браузера и не является генерацией нейросети.</p></div>
+  </div></div>
 </div>
 </div>
 </section>
@@ -158,8 +210,8 @@
 
 
 
-<section id="screen-prompt" class="screen">
-<div class="heading"><div><div class="eyebrow">Анимация без исходных картинок</div><h1>Анимация по промпту</h1><p>Опиши сцену словами — AniMotion нарисует движущуюся графическую сцену прямо в браузере.</p></div><span class="pill">● бесплатно · локально</span></div>
+<section id="screen-demo" class="screen">
+<div class="heading"><div><div class="eyebrow">Дополнительный тестовый режим</div><h1>Графическое демо</h1><p>Процедурные графические эффекты для быстрых заставок. Это не генератор нейросетевого видео.</p></div><span class="pill">● НЕ AI-видео</span></div>
 <div class="prompt-grid">
   <div>
     <div class="panel"><div class="ph"><h2>Предпросмотр сцены</h2><span id="promptTime">00:00 / 00:10</span></div><div class="body">
@@ -222,7 +274,183 @@ function base(){let v=$('comfyUrl').value.trim()||'/comfy';return v.replace(/\/+
 async function check(){const b=base();$('comfyStatus').className='status';$('comfyStatus').textContent='Проверяю соединение…';try{const r=await fetch(b+'/system_stats');if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json(),gpu=d.system&&d.system.devices&&d.system.devices[0];$('comfyStatus').className='status ok';$('comfyStatus').textContent='ComfyUI отвечает.'+(gpu?' GPU: '+(gpu.name||'обнаружена'):'');return true}catch(e){$('comfyStatus').className='status warn';$('comfyStatus').textContent='Нет соединения: '+e.message+'. Запусти ComfyUI и start-animotion.bat.';return false}}
 function mapWorkflow(w){const entries=Object.entries(w).filter(([id,n])=>n&&n.inputs&&typeof n.inputs.text==='string');$('positiveNode').innerHTML='<option value="">Выбери узел</option>'+entries.map(([id,n])=>'<option value="'+id+'">'+id+' · '+(n.class_type||'Text')+'</option>').join('');$('negativeNode').innerHTML='<option value="">Не выбран</option>'+entries.map(([id,n])=>'<option value="'+id+'">'+id+' · '+(n.class_type||'Text')+'</option>').join('');$('positiveNode').disabled=!entries.length;$('negativeNode').disabled=!entries.length;$('generateLocal').disabled=!entries.length;$('workflowStatus').textContent=entries.length?'Найдено текстовых узлов: '+entries.length+'. Выбери позитивный узел и при необходимости негативный.':'В workflow не найдено стандартных текстовых узлов с inputs.text.'}
 $('workflowFile').onchange=async e=>{try{workflow=JSON.parse(await e.target.files[0].text());mapWorkflow(workflow);toast('Workflow загружен')}catch(err){workflow=null;$('workflowStatus').textContent='Не удалось прочитать JSON workflow.'}};
-async function generate(){if(!workflow||!$('positiveNode').value){toast('Сначала загрузи API-workflow и выбери позитивный узел');return}read();if(!scene().description.trim()){toast('Сначала напиши описание сцены');return}const w=JSON.parse(JSON.stringify(workflow)),pos=$('positiveNode').value,neg=$('negativeNode').value;w[pos].inputs.text=promptText(scene());if(neg&&w[neg]&&w[neg].inputs)w[neg].inputs.text=scene().negative||'flicker, artifacts, watermark';cancel=false;$('generateLocal').disabled=true;$('stopLocal').disabled=false;$('generationStatus').className='status';$('generationStatus').textContent='Отправляю workflow…';try{const r=await fetch(base()+'/prompt',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:w})}),d=await r.json();if(!r.ok||!d.prompt_id)throw Error(d.error?.message||'ComfyUI не принял workflow');promptId=d.prompt_id;$('generationStatus').textContent='Задание в очереди. ID: '+promptId;let done=false;for(let i=0;i<600&&!cancel;i++){await new Promise(ok=>setTimeout(ok,2500));const h=await fetch(base()+'/history/'+encodeURIComponent(promptId));if(!h.ok)continue;const hist=await h.json(),entry=hist[promptId];if(!entry)continue;const st=entry.status||{};if(st.completed||st.status_str==='success'){done=true;const files=[];for(const out of Object.values(entry.outputs||{})){for(const k of ['videos','gifs','images'])for(const f of out[k]||[])if(f.filename)files.push({k,f})}const host=$('generationResult');host.innerHTML='';files.forEach(({k,f})=>{const url=base()+'/view?filename='+encodeURIComponent(f.filename)+'&subfolder='+encodeURIComponent(f.subfolder||'')+'&type='+encodeURIComponent(f.type||'output');const el=document.createElement(k==='videos'?'video':'img');el.src=url;if(k==='videos')el.controls=true;el.className='video';host.append(el);const a=document.createElement('a');a.href=url;a.target='_blank';a.textContent='Открыть / сохранить результат';a.className='btn';host.append(a)});$('generationStatus').className='status ok';$('generationStatus').textContent='Готово. Файлов: '+files.length;break}if(st.status_str==='error')throw Error('Ошибка выполнения. Посмотри журнал ComfyUI.')}if(cancel){$('generationStatus').textContent='Остановка запрошена.'}else if(!done)throw Error('Долгое ожидание. Проверь очередь ComfyUI')}catch(e){$('generationStatus').className='status bad';$('generationStatus').textContent='Ошибка: '+e.message}finally{promptId=null;$('generateLocal').disabled=false;$('stopLocal').disabled=true}}
+let aiShots=[];
+const aiShotRecipes=[
+  {title:'Общий план · знакомство с миром',frame:'wide cinematic establishing shot, show the environment and the main character clearly',action:'Introduce the location and establish where the character is in the scene',camera:'slow controlled camera move that reveals the environment'},
+  {title:'Средний план · основное действие',frame:'medium shot, show the character from approximately waist-up or full body as appropriate',action:'Focus on the main action described by the user, with a readable beginning and end',camera:'smooth tracking shot that follows the character action'},
+  {title:'Крупный план · эмоция и детали',frame:'cinematic close-up, emphasize face, hands, important objects and emotional detail',action:'Show the character reaction or the most important detail that makes the action understandable',camera:'subtle push-in with stable framing'},
+  {title:'Динамичный план · развитие',frame:'dynamic three-quarter shot with clear foreground, subject and background separation',action:'Show the next beat of the same action, preserving the same character and environment',camera:'controlled orbit or lateral tracking movement'},
+  {title:'Деталь · важный момент',frame:'close detail shot focused on the key object, gesture or visual clue',action:'Emphasize the narrative detail without changing the character design',camera:'precise short camera move, no sudden cuts'},
+  {title:'Финал · завершающий образ',frame:'cinematic hero shot with a strong readable composition',action:'Complete the described action and end on a visually memorable image',camera:'slow settle and gentle pull-back'}
+];
+function aiStyleDescription(v){
+  return ({
+    mixed:'Mixed art direction: intelligently blend cinematic realism, expressive 3D animation, 2D illustration, anime-inspired design and motion-graphics accents only when they serve the subject; maintain one coherent visual language and avoid an incoherent collage',
+    cinematic:'high-end cinematic photorealism, natural materials, believable anatomy, physically plausible lighting and lens behaviour',
+    '3d':'polished high-end 3D character animation, expressive but believable design, detailed materials, cinematic rendering',
+    '2d':'premium hand-drawn 2D animation, expressive linework, layered painted backgrounds, fluid character animation',
+    anime:'high-quality anime film direction, expressive character acting, carefully composed backgrounds, fluid limited-to-full animation',
+    motion:'premium motion graphics, sophisticated shape language, kinetic typography only when relevant, precise graphic transitions and layered composition'
+  })[v]||'coherent cinematic animation';
+}
+function buildShotPrompt(index,source){
+  const recipe=aiShotRecipes[index%aiShotRecipes.length];
+  const ratio=$('aiRatio').value;
+  const duration=$('aiDuration').value;
+  const cameraMode=$('aiCamera').value;
+  const cameraText=cameraMode==='adaptive'?recipe.camera:({
+    dolly:'slow cinematic dolly-in, stable horizon and controlled parallax',
+    tracking:'smooth tracking camera follows the character while keeping readable screen direction',
+    orbit:'controlled cinematic orbit around the subject, maintain consistent geography',
+    pan:'smooth deliberate pan that reveals the scene without snapping',
+    handheld:'restrained handheld camera movement, cinematic and readable, no chaotic shake'
+  })[cameraMode];
+  const motionText=({
+    natural:'natural, continuous, physically plausible body and object motion, believable weight and inertia',
+    dramatic:'expressive dramatic action with readable anticipation, follow-through and emotional body language',
+    action:'energetic action with clear choreography, stable anatomy and continuous motion',
+    slow:'graceful slow motion, fluid arcs and subtle secondary movement'
+  })[$('aiMotion').value];
+  const lightingText=({
+    cinematic:'cinematic key light, soft fill, motivated rim light, rich but controlled contrast',
+    natural:'natural motivated lighting with realistic bounce and atmospheric depth',
+    dramatic:'dramatic directional light, shaped shadows and carefully controlled highlights',
+    neon:'stylized neon accents, reflective surfaces and atmospheric coloured light',
+    soft:'soft illustrated lighting, delicate gradients and gentle atmospheric depth'
+  })[$('aiLighting').value];
+  const character=$('aiCharacter').value.trim();
+  return [
+    'Create one complete animated video shot, not a storyboard collage and not a static poster.',
+    'Visual style: '+aiStyleDescription($('aiStyle').value)+'.',
+    'Story brief from the creator: '+source,
+    character?'Character identity lock: '+character+'. Reproduce this same character design exactly in every shot.':'Keep the main character identity, costume, face and proportions consistent throughout this shot and all other shots in the sequence.',
+    'Shot '+(index+1)+' of the sequence: '+recipe.title+'.',
+    'Framing: '+recipe.frame+'.',
+    'Narrative beat: '+recipe.action+'.',
+    'Camera direction: '+cameraText+'.',
+    'Motion direction: '+motionText+'.',
+    'Lighting: '+lightingText+'.',
+    'Visual continuity: preserve the same setting, time of day, props, costume, character face, body proportions, colour palette and screen direction as the other shots.',
+    'Animation quality: fluid coherent movement over time, stable geometry, stable faces and hands, natural secondary motion, detailed materials, clean composition, no flicker or morphing.',
+    'Technical target: '+duration+' seconds, aspect ratio '+ratio+'.',
+    'Do not insert captions, subtitles, logos or watermarks unless explicitly requested in the story.'
+  ].join(' ');
+}
+function renderAiShots(){
+  $('aiShotCountLabel').textContent=aiShots.length?aiShots.length+' план(а) · промпты можно править':'Планы ещё не созданы';
+  if(!aiShots.length){$('aiShotList').innerHTML='<div class="status">Сначала нажми «Сформировать планы».</div>';return}
+  $('aiShotList').innerHTML=aiShots.map((shot,i)=>'<div class="card ai-shot-card"><b>План '+(i+1)+' · '+esc(shot.title)+'</b><p>'+esc(shot.description)+'</p><div class="field"><label for="ai-shot-'+i+'">Промпт для модели</label><textarea id="ai-shot-'+i+'" data-ai-shot="'+i+'" rows="7">'+esc(shot.prompt)+'</textarea></div></div>').join('');
+  document.querySelectorAll('[data-ai-shot]').forEach(el=>el.oninput=()=>{const i=Number(el.dataset.aiShot);if(aiShots[i])aiShots[i].prompt=el.value});
+}
+function createAiShotPlan(){
+  const source=$('aiPrompt').value.trim();
+  if(!source){$('aiPlanStatus').className='status warn';$('aiPlanStatus').textContent='Сначала опиши сюжет ролика.';return false}
+  const n=Number($('aiShotCount').value)||3;
+  aiShots=Array.from({length:n},(_,i)=>({title:aiShotRecipes[i].title,description:aiShotRecipes[i].action,prompt:buildShotPrompt(i,source)}));
+  renderAiShots();
+  $('aiPlanStatus').className='status ok';
+  $('aiPlanStatus').textContent='Готово: создано '+n+' постановочных план(а). Это режиссёрская разбивка и расширение промпта, а не отдельная языковая нейросеть. Проверь каждый план и при необходимости исправь его перед генерацией.';
+  return true;
+}
+function exportAiPrompts(){
+  if(!aiShots.length&&!createAiShotPlan())return;
+  const txt=aiShots.map((s,i)=>'PLAN '+(i+1)+' — '+s.title+'\n\n'+s.prompt+'\n\nNEGATIVE PROMPT\n'+$('aiNegative').value.trim()).join('\n\n'+'='.repeat(70)+'\n\n');
+  download('animotion-ai-shot-prompts.txt',txt);
+}
+$('aiPlanButton').onclick=createAiShotPlan;
+$('aiExportPrompts').onclick=exportAiPrompts;
+async function generate(){
+  if(!workflow||!$('positiveNode').value){
+    $('generationStatus').className='status warn';
+    $('generationStatus').textContent='Сначала подключи ComfyUI, загрузи API-workflow и выбери позитивный текстовый узел.';
+    return;
+  }
+  if(!aiShots.length&&!createAiShotPlan())return;
+  if(!await check())return;
+  cancel=false;
+  $('generateLocal').disabled=true;
+  $('stopLocal').disabled=false;
+  $('generationResult').innerHTML='';
+  $('generationStatus').className='status';
+  let filesTotal=0,videoTotal=0,imageTotal=0,finished=0;
+  const negative=$('aiNegative').value.trim()||'flicker, face distortion, extra limbs, artifacts, watermark';
+  try{
+    for(let i=0;i<aiShots.length&&!cancel;i++){
+      const shot=aiShots[i];
+      $('generationStatus').textContent='План '+(i+1)+' из '+aiShots.length+': отправляю запрос в ComfyUI…';
+      const w=JSON.parse(JSON.stringify(workflow));
+      const pos=$('positiveNode').value,neg=$('negativeNode').value;
+      if(!w[pos]||!w[pos].inputs)throw Error('Позитивный узел не найден в workflow.');
+      w[pos].inputs.text=shot.prompt;
+      if(neg&&w[neg]&&w[neg].inputs)w[neg].inputs.text=negative;
+      const response=await fetch(base()+'/prompt',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:w})});
+      let queued={};try{queued=await response.json()}catch(e){}
+      if(!response.ok||!queued.prompt_id)throw Error(queued.error?.message||'ComfyUI не принял workflow (HTTP '+response.status+').');
+      promptId=queued.prompt_id;
+      let entry=null;
+      for(let poll=0;poll<600&&!cancel;poll++){
+        await new Promise(resolve=>setTimeout(resolve,2500));
+        let history;
+        try{const h=await fetch(base()+'/history/'+encodeURIComponent(promptId));if(!h.ok)continue;history=await h.json()}catch(e){continue}
+        entry=history[promptId];
+        if(!entry)continue;
+        const st=entry.status||{};
+        if(st.status_str==='error')throw Error('ComfyUI сообщил об ошибке в плане '+(i+1)+'. Проверь журнал ComfyUI и доступную VRAM.');
+        if(st.completed||st.status_str==='success')break;
+      }
+      if(cancel)break;
+      if(!entry||( !(entry.status||{}).completed && (entry.status||{}).status_str!=='success'))throw Error('План '+(i+1)+': слишком долго нет результата. Проверь очередь ComfyUI.');
+      const outputs=[];
+      for(const out of Object.values(entry.outputs||{})){
+        for(const kind of ['videos','gifs','images']){
+          for(const f of out[kind]||[])if(f.filename)outputs.push({kind,file:f});
+        }
+      }
+      const section=document.createElement('div');
+      section.className='card ai-result-card';
+      const heading=document.createElement('b');
+      heading.textContent='План '+(i+1)+' · '+shot.title;
+      section.append(heading);
+      if(!outputs.length){
+        const msg=document.createElement('p');msg.textContent='Задание завершилось, но workflow не вернул videos, gifs или images. Проверь выходные узлы workflow.';section.append(msg);
+      }
+      for(const item of outputs){
+        const f=item.file;
+        const url=base()+'/view?filename='+encodeURIComponent(f.filename)+'&subfolder='+encodeURIComponent(f.subfolder||'')+'&type='+encodeURIComponent(f.type||'output');
+        const isVideo=item.kind==='videos';
+        const media=document.createElement(isVideo?'video':'img');
+        media.src=url;
+        if(isVideo)media.controls=true;
+        media.className='video';
+        section.append(media);
+        const link=document.createElement('a');
+        link.href=url;link.target='_blank';link.rel='noopener';link.textContent='Открыть / сохранить файл';link.className='btn';
+        section.append(link);
+        filesTotal++;
+        if(isVideo)videoTotal++;else imageTotal++;
+      }
+      $('generationResult').append(section);
+      finished++;
+      $('generationStatus').textContent='Завершено '+finished+' из '+aiShots.length+' план(ов). Получено видео: '+videoTotal+', изображений/GIF: '+imageTotal+'.';
+    }
+    if(cancel){
+      $('generationStatus').className='status warn';
+      $('generationStatus').textContent='Остановлено пользователем после '+finished+' завершённых план(ов).';
+    }else{
+      $('generationStatus').className=videoTotal?'status ok':'status warn';
+      $('generationStatus').textContent=videoTotal
+        ?'Готово: создано видеофайлов '+videoTotal+' и изображений/GIF '+imageTotal+'. Планы генерировались отдельно; проверь совпадение персонажа и монтажную последовательность.'
+        :'Workflow вернул '+imageTotal+' изображений/GIF и не вернул видео. Для движения нужен совместимый Text-to-Video или Image-to-Video workflow.';
+    }
+  }catch(error){
+    $('generationStatus').className='status bad';
+    $('generationStatus').textContent='Ошибка генерации: '+error.message;
+  }finally{
+    promptId=null;
+    $('generateLocal').disabled=false;
+    $('stopLocal').disabled=true;
+  }
+}
 $('stopLocal').onclick=async()=>{cancel=true;try{await fetch(base()+'/interrupt',{method:'POST'})}catch(e){}};
 document.querySelectorAll('[data-screen]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-screen]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.screen').forEach(x=>x.classList.toggle('active',x.id==='screen-'+b.dataset.screen))});
 ['sceneTitle','description','style','ratio','duration','camera','motion','light','negative'].forEach(id=>$(id).addEventListener('change',read));
