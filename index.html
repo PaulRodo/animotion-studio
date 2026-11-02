@@ -4,10 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#10131d">
-<title>AniMotion Studio 0.3</title>
+<title>AniMotion Studio 0.4</title>
 <style>
 :root{color-scheme:dark;--bg:#0d1018;--panel:#151b28;--panel2:#1c2433;--line:#2b3548;--txt:#f4f6fb;--muted:#9ba8bd;--violet:#a78bfa;--mint:#68e1d1;--good:#8de0b6;--warn:#efd18d;--bad:#ff9ba9;font-family:Inter,system-ui,"Segoe UI",Arial,sans-serif}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -10%,#29264a 0,transparent 38%),var(--bg);color:var(--txt);min-height:100vh}button,input,textarea,select{font:inherit}button{cursor:pointer;color:inherit}.app{max-width:1600px;margin:auto;min-height:100vh;display:grid;grid-template-columns:230px minmax(0,1fr)}aside{padding:22px 15px;border-right:1px solid var(--line);background:#10141eee;display:flex;flex-direction:column;gap:22px}.brand{display:flex;align-items:center;gap:10px;padding:2px 8px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#a78bfa,#68e1d1);display:grid;place-items:center;color:#111827;font-weight:900;font-size:20px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.navlabel{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#78859b;padding:0 10px 8px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;text-align:left;padding:11px;border-radius:10px;color:#b8c3d5}.nav button.active,.nav button:hover{background:#282744;color:white}.nav button.active{box-shadow:inset 3px 0 var(--violet)}.foot{margin-top:auto;border:1px solid #31534d;background:#17333155;border-radius:13px;padding:13px}.foot b{font-size:12px}.foot p{font-size:11px;line-height:1.5;color:#a9bfbd;margin:6px 0 0}.main{min-width:0}.top{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 25px;background:#10141bbd;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.top input{max-width:300px;width:100%;font-size:15px;font-weight:700;color:var(--txt);background:transparent;border:0;outline:0}.top small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.actions{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.pill{border:1px solid #315b4c;color:var(--good);background:#15372d88;padding:6px 9px;border-radius:40px;font-size:10px;white-space:nowrap}.btn{border:1px solid var(--line);border-radius:10px;background:var(--panel2);padding:9px 12px;font-size:12px;font-weight:650}.btn:hover{border-color:#8c79dc}.btn.primary{background:linear-gradient(120deg,#8b71e8,#6d62ce);border-color:transparent}.btn.ghost{background:transparent}.btn:disabled{opacity:.5;cursor:not-allowed}.wrap{max-width:1400px;margin:auto;padding:24px 26px 45px}.screen{display:none}.screen.active{display:block}.heading{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px}.eyebrow{font-size:10px;color:var(--mint);font-weight:800;letter-spacing:1.7px;text-transform:uppercase}.heading h1{font-size:24px;letter-spacing:-.5px;margin:5px 0}.heading p{font-size:12px;color:var(--muted);margin:0}.layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.8fr);gap:16px;align-items:start}.panel{border:1px solid var(--line);border-radius:15px;background:linear-gradient(180deg,#171e2b,#141a25);overflow:hidden;margin-bottom:15px}.ph{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.ph h2{font-size:13px;margin:0}.ph span{font-size:10px;color:var(--muted)}.body{padding:15px;display:grid;gap:13px}.preview{aspect-ratio:16/9;border:1px solid #3b4560;border-radius:12px;position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;background:radial-gradient(ellipse at 65% 45%,#a78bfa55,transparent 26%),radial-gradient(ellipse at 25% 82%,#1cb5a255,transparent 33%),linear-gradient(135deg,#17233b,#111522 56%,#302540)}.preview:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 38px,#ffffff09 39px),repeating-linear-gradient(90deg,transparent 0 38px,#ffffff09 39px)}.orb{width:72px;height:72px;border-radius:50%;margin:0 auto 13px;background:radial-gradient(circle at 32% 28%,white,#d5c8ff 13%,#9e81ff 40%,#423576 75%);box-shadow:0 0 34px #ac90ff99}.preview h2{font-size:clamp(14px,2vw,23px);margin:0;text-shadow:0 3px 18px black}.preview p{font-size:11px;color:#d4d8eb}.preview-content{z-index:1;padding:18px;max-width:80%}.field{display:grid;gap:6px}.field label{font-size:11px;color:#c4ccdc;font-weight:700}.field small,.hint{font-size:10px;color:var(--muted);line-height:1.5}.field input,.field textarea,.field select{width:100%;border:1px solid #344057;background:#0f1420;color:var(--txt);border-radius:9px;padding:10px;font-size:12px;outline:0}.field textarea{min-height:94px;resize:vertical;line-height:1.5}.field input:focus,.field textarea:focus,.field select:focus{border-color:#9a86f4}.row{display:grid;grid-template-columns:1fr 1fr;gap:9px}.notice{padding:11px 13px;border:1px solid #65522e;background:#45351c55;color:var(--warn);border-radius:10px;font-size:11px;line-height:1.5}.list{display:grid;gap:8px;padding:13px}.scene{display:flex;gap:11px;align-items:center;padding:11px;border:1px solid var(--line);border-radius:11px;background:#101725;cursor:pointer}.scene.selected{border-color:#9a86f4;background:#25213a}.thumb{width:75px;height:50px;flex-shrink:0;border-radius:8px;background:linear-gradient(135deg,#293c60,#7660a4);display:grid;place-items:center}.scene b{font-size:12px}.scene p{font-size:10px;color:var(--muted);margin:4px 0 0}.scene .grow{flex:1;min-width:0}.scene p{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gridcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}.card{border:1px solid var(--line);border-radius:12px;padding:13px;background:#111725}.card b{font-size:12px}.card p{font-size:11px;color:var(--muted);line-height:1.5}.status{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#101725;color:var(--muted);font-size:11px;line-height:1.5;overflow-wrap:anywhere}.status.ok{color:var(--good);border-color:#315b4c}.status.bad{color:var(--bad);border-color:#70404a}.status.warn{color:var(--warn);border-color:#65522e}.output{white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid var(--line);background:#0d121c;border-radius:10px;padding:12px;font:11px/1.5 ui-monospace,monospace;max-height:280px;overflow:auto}.video{width:100%;max-height:400px;border-radius:10px;background:#05070b;margin-top:10px}.hide{display:none!important}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,18px);opacity:0;background:#eeeaff;color:#211a3b;padding:10px 14px;border-radius:10px;font-size:12px;z-index:20;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.motion-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.75fr);gap:16px;align-items:start}
+.motion-canvas-wrap{background:#070a12;border:1px solid #344057;border-radius:12px;overflow:hidden;line-height:0}
+#motionCanvas{width:100%;height:auto;display:block;aspect-ratio:16/9;background:#080b12}
+.motion-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.motion-timeline{display:grid;gap:8px}
+.motion-clip{display:grid;grid-template-columns:86px minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:11px;background:#101725}
+.motion-clip img{width:86px;height:58px;object-fit:cover;border-radius:7px;background:#090c13}
+.motion-clip b{font-size:11px;display:block;overflow-wrap:anywhere}
+.motion-clip .clip-meta{font-size:10px;color:var(--muted);margin-top:4px}
+.motion-clip select{width:100%;margin-top:6px;border:1px solid #344057;background:#0f1420;color:var(--txt);border-radius:7px;padding:6px;font-size:10px}
+.motion-clip .clip-actions{display:grid;gap:4px}
+.motion-clip .clip-actions button{padding:5px 8px}
+.motion-progress{height:7px;border-radius:20px;background:#293247;overflow:hidden}
+.motion-progress>span{height:100%;display:block;width:0;background:linear-gradient(90deg,#8b71e8,#68e1d1);transition:width .12s}
+.motion-small{font-size:10px;color:var(--muted);line-height:1.5}
+.motion-result video{width:100%;margin-top:10px;border-radius:10px;background:#05070b}
+@media(max-width:900px){.motion-grid{grid-template-columns:1fr}}
+
 @media(max-width:900px){.app{grid-template-columns:64px minmax(0,1fr)}aside{padding:15px 8px;align-items:center}.brand{padding:0}.brand .brandtxt,.navlabel,.navtext,.foot{display:none}.nav button{width:44px;text-align:center;font-size:17px}.layout{grid-template-columns:1fr}.top{padding:0 14px}.wrap{padding:18px 14px 30px}}
 @media(max-width:580px){.app{display:block}aside{height:58px;position:sticky;top:0;z-index:10;border:0;border-bottom:1px solid var(--line);flex-direction:row;justify-content:space-between;padding:6px 10px}.brand{display:none}.nav{display:flex;gap:3px}.nav button{width:auto;padding:9px 11px}.top{height:58px}.pill{display:none}.heading{align-items:flex-start;flex-direction:column}.row{grid-template-columns:1fr}}
 </style>
@@ -15,12 +34,13 @@
 <body>
 <div class="app">
 <aside>
-  <div class="brand"><div class="logo">✦</div><div class="brandtxt"><b>AniMotion Studio</b><small>версия 0.3 · free edition</small></div></div>
+  <div class="brand"><div class="logo">✦</div><div class="brandtxt"><b>AniMotion Studio</b><small>версия 0.4 · free edition</small></div></div>
   <div style="width:100%"><div class="navlabel">Рабочее пространство</div><nav class="nav">
     <button class="active" data-screen="studio">◈ <span class="navtext">Студия</span></button>
     <button data-screen="story">▤ <span class="navtext">Раскадровка</span></button>
     <button data-screen="people">♙ <span class="navtext">Персонажи</span></button>
     <button data-screen="ai">✦ <span class="navtext">ИИ-генерация</span></button>
+    <button data-screen="motion">▣ <span class="navtext">Motion Lab</span></button>
   </nav></div>
   <div class="foot"><b>Бесплатная основа</b><p>Редактор, сцены, промпты и хранение проекта работают локально. Платные API не требуются.</p></div>
 </aside>
@@ -81,6 +101,51 @@
 </div>
 </div>
 </section>
+
+<section id="screen-motion" class="screen">
+<div class="heading"><div><div class="eyebrow">Лёгкий монтаж без нейросетей</div><h1>Motion Lab</h1><p>Оживляй изображения движением камеры, переходами и текстом. Работает на RTX 2050 без тяжёлой AI-генерации.</p></div><span class="pill">● 720p · WebM</span></div>
+<div class="motion-grid">
+<div>
+  <div class="panel"><div class="ph"><h2>Предпросмотр видео</h2><span id="motionTime">00:00 / 00:00</span></div>
+    <div class="body">
+      <div class="motion-canvas-wrap"><canvas id="motionCanvas" width="1280" height="720"></canvas></div>
+      <div class="motion-progress"><span id="motionProgressBar"></span></div>
+      <div class="motion-controls">
+        <button class="btn primary" id="motionPlay">▶ Предпросмотр</button>
+        <button class="btn" id="motionStop" disabled>■ Стоп</button>
+        <button class="btn" id="motionExport">⇩ Экспорт WebM</button>
+        <span class="motion-small" id="motionSummary">Добавь изображения, чтобы начать.</span>
+      </div>
+      <div class="status warn" id="motionStatus">Добавь несколько изображений — браузер соберёт из них лёгкую анимацию без запуска нейросети.</div>
+      <div class="motion-result" id="motionResult"></div>
+    </div>
+  </div>
+  <div class="panel"><div class="ph"><h2>Таймлайн изображений</h2><span id="motionClipCount">0 кадров</span></div>
+    <div class="body">
+      <div class="field"><label for="motionFiles">Добавить изображения (PNG / JPG / WEBP)</label><input id="motionFiles" type="file" accept="image/png,image/jpeg,image/webp" multiple><small>Выбирай кадры, иллюстрации или персонажей. Файлы обрабатываются локально в браузере и не загружаются в интернет.</small></div>
+      <div class="motion-timeline" id="motionClips"><div class="status">Пока нет изображений.</div></div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="panel"><div class="ph"><h2>Настройки ролика</h2><span>Для YouTube</span></div><div class="body">
+    <div class="field"><label for="motionRatio">Формат кадра</label><select id="motionRatio"><option value="16:9">16:9 — YouTube</option><option value="9:16">9:16 — Shorts</option><option value="1:1">1:1 — квадрат</option></select></div>
+    <div class="row"><div class="field"><label for="motionFps">Частота кадров</label><select id="motionFps"><option value="24">24 FPS</option><option value="30" selected>30 FPS</option><option value="60">60 FPS</option></select></div><div class="field"><label for="motionTransition">Переход</label><select id="motionTransition"><option value="0.25">0,25 с</option><option value="0.5" selected>0,5 с</option><option value="0.8">0,8 с</option><option value="0">Без перехода</option></select></div></div>
+    <div class="field"><label for="motionTitle">Заголовок на видео</label><input id="motionTitle" placeholder="Например: Тайны далёкой галактики"></div>
+    <div class="field"><label for="motionCaption">Подпись внизу</label><input id="motionCaption" placeholder="Короткий поясняющий текст"></div>
+    <div class="field"><label for="motionTitleSize">Размер заголовка</label><select id="motionTitleSize"><option value="small">Компактный</option><option value="medium" selected>Средний</option><option value="large">Крупный</option></select></div>
+    <div class="notice">Экспорт создаёт файл WebM с видео без аудиодорожки. Такой файл можно загрузить на YouTube. Для MP4 его можно дополнительно конвертировать в бесплатном FFmpeg.</div>
+  </div></div>
+  <div class="panel"><div class="ph"><h2>Что умеет Motion Lab</h2></div><div class="body">
+    <div class="card"><b>Плавное движение камеры</b><p>Наезд, отъезд, панорама влево/вправо и лёгкое движение изображения.</p></div>
+    <div class="card"><b>Переходы между кадрами</b><p>Плавное перекрытие изображений, чтобы собрать последовательность сцен.</p></div>
+    <div class="card"><b>Видео из браузера</b><p>Запись холста в WebM. Не требуется RTX-генерация, облачный API или подписка.</p></div>
+    <div class="motion-small">На первом этапе изображения и настройки Motion Lab живут в памяти текущей вкладки. Сохрани исходные картинки отдельно; после перезагрузки их нужно добавить снова.</div>
+  </div></div>
+</div>
+</div>
+</section>
+
 </div></main></div><div class="toast" id="toast"></div>
 <script>
 (function(){
@@ -116,7 +181,81 @@ $('sceneTitle').addEventListener('input',()=>{clearTimeout(window._titleTimer);w
 $('save').onclick=save;$('saveScene').onclick=()=>{read();toast('Параметры сцены сохранены')};$('addScene').onclick=addScene;$('addScene2').onclick=addScene;$('makePrompt').onclick=renderPrompt;$('copyPrompt').onclick=()=>copy($('promptOutput').textContent);$('downloadPrompt').onclick=()=>{renderPrompt();download('animotion-scene-prompt.txt',$('promptOutput').textContent)};$('export').onclick=()=>{read();download('animotion-project.json',JSON.stringify(project,null,2),'application/json')};$('import').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{try{const p=JSON.parse(await e.target.files[0].text());if(!Array.isArray(p.scenes)||!p.scenes.length)throw Error();project=p;current=0;$('projectName').value=project.name||'';fill();renderAll();save()}catch(err){toast('Файл проекта не распознан')}e.target.value=''};
 $('addCharacter').onclick=()=>{const name=prompt('Имя персонажа:');if(!name)return;const description=prompt('Опиши постоянную внешность, одежду и особенности персонажа:')||'';project.characters.push({name,description});renderCharacters();save()};
 $('checkComfy').onclick=check;$('openComfy').onclick=()=>window.open('http://127.0.0.1:8188','_blank','noopener');$('generateLocal').onclick=generate;
+
+let motionClips=[],motionRaf=null,motionExportTimer=null,motionRecorder=null,motionStream=null,motionBlobUrl=null,motionPreviewStart=0,motionExportStart=0,motionChunks=[];
+const motionCanvas=$('motionCanvas'),motionCtx=motionCanvas.getContext('2d');
+const clampMotion=(v,a,b)=>Math.max(a,Math.min(b,v));
+function motionSize(){const r=$('motionRatio').value;motionCanvas.width=r==='9:16'?720:(r==='1:1'?900:1280);motionCanvas.height=r==='9:16'?1280:(r==='1:1'?900:720)}
+function motionTransition(){return Number($('motionTransition').value)||0}
+function motionStarts(){let starts=[],at=0,tr=motionTransition();motionClips.forEach((c,i)=>{starts.push(at);at+=Number(c.duration||4)-(i<motionClips.length-1?tr:0)});return {starts,total:Math.max(0,at)}}
+function motionTimeLabel(t){const sec=Math.max(0,Math.floor(t));return String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0')}
+function drawMotionFrame(time){
+  const W=motionCanvas.width,H=motionCanvas.height,ctx=motionCtx,{starts,total}=motionStarts();
+  ctx.clearRect(0,0,W,H);ctx.fillStyle='#080b12';ctx.fillRect(0,0,W,H);
+  if(!motionClips.length){ctx.fillStyle='#9ba8bd';ctx.textAlign='center';ctx.font='600 26px system-ui';ctx.fillText('Добавь изображения в таймлайн',W/2,H/2);ctx.font='16px system-ui';ctx.fillText('PNG · JPG · WEBP',W/2,H/2+34);return}
+  motionClips.forEach((clip,i)=>{
+    const local=time-starts[i],duration=Number(clip.duration||4);
+    if(local<0||local>duration||!clip.img||!clip.img.complete)return;
+    const p=clampMotion(local/duration,0,1),tr=motionTransition();
+    let alpha=1;if(tr>0&&i>0)alpha=Math.min(alpha,clampMotion(local/tr,0,1));if(tr>0&&i<motionClips.length-1)alpha=Math.min(alpha,clampMotion((duration-local)/tr,0,1));
+    let zoom=1.05,dx=0,dy=0;
+    if(clip.motion==='zoom-in')zoom=1.02+.14*p;
+    else if(clip.motion==='zoom-out')zoom=1.16-.14*p;
+    else if(clip.motion==='pan-left'){zoom=1.14;dx=(.5-p)*W*.075}
+    else if(clip.motion==='pan-right'){zoom=1.14;dx=(p-.5)*W*.075}
+    else if(clip.motion==='float'){zoom=1.11;dx=Math.sin(p*Math.PI*2)*W*.018;dy=Math.cos(p*Math.PI*2)*H*.012}
+    else if(clip.motion==='pan-up'){zoom=1.14;dy=(.5-p)*H*.07}
+    const scale=Math.max(W/clip.img.width,H/clip.img.height)*zoom,dw=clip.img.width*scale,dh=clip.img.height*scale;
+    ctx.save();ctx.globalAlpha=alpha;ctx.drawImage(clip.img,(W-dw)/2+dx,(H-dh)/2+dy,dw,dh);ctx.restore();
+  });
+  const title=$('motionTitle').value.trim(),caption=$('motionCaption').value.trim();
+  if(title||caption){
+    const grad=ctx.createLinearGradient(0,H*.65,0,H);grad.addColorStop(0,'rgba(0,0,0,0)');grad.addColorStop(1,'rgba(0,0,0,.78)');ctx.fillStyle=grad;ctx.fillRect(0,H*.62,W,H*.38);
+    const size=$('motionTitleSize').value,fs=size==='large'?Math.round(W*.055):(size==='small'?Math.round(W*.033):Math.round(W*.043));
+    ctx.textAlign='left';ctx.textBaseline='alphabetic';ctx.shadowColor='rgba(0,0,0,.75)';ctx.shadowBlur=10;ctx.fillStyle='#fff';ctx.font='700 '+fs+'px system-ui, sans-serif';
+    const max=W*.84;let line='',lines=[];title.split(/\s+/).forEach(word=>{const test=line?line+' '+word:word;if(ctx.measureText(test).width>max&&line){lines.push(line);line=word}else line=test});if(line)lines.push(line);
+    const step=fs*1.15,startY=H-(caption?Math.max(70,H*.105):Math.max(46,H*.07))-(lines.length-1)*step;
+    lines.slice(-2).forEach((v,i)=>ctx.fillText(v,W*.065,startY+i*step));
+    if(caption){ctx.shadowBlur=6;ctx.font='500 '+Math.round(W*.022)+'px system-ui, sans-serif';ctx.fillStyle='#dce5f4';ctx.fillText(caption,W*.067,H*.94,W*.85)}
+    ctx.shadowBlur=0;
+  }
+  const current=clampMotion(time,0,total);$('motionTime').textContent=motionTimeLabel(current)+' / '+motionTimeLabel(total);$('motionProgressBar').style.width=(total?100*current/total:0)+'%';
+}
+function renderMotionClips(){
+  $('motionClipCount').textContent=motionClips.length+' кадров';
+  if(!motionClips.length){$('motionClips').innerHTML='<div class="status">Пока нет изображений. Добавь несколько PNG или JPG.</div>';$('motionSummary').textContent='Добавь изображения, чтобы начать.';drawMotionFrame(0);return}
+  const {total}=motionStarts();$('motionSummary').textContent=motionClips.length+' изображений · около '+total.toFixed(1)+' с';
+  $('motionClips').innerHTML=motionClips.map((c,i)=>'<div class="motion-clip"><img src="'+c.url+'" alt=""><div><b>'+esc(c.name)+'</b><div class="clip-meta">Кадр '+(i+1)+' · '+c.duration+' с</div><select data-clip-motion="'+i+'"><option value="zoom-in" '+(c.motion==='zoom-in'?'selected':'')+'>Плавный наезд</option><option value="zoom-out" '+(c.motion==='zoom-out'?'selected':'')+'>Плавное отдаление</option><option value="pan-left" '+(c.motion==='pan-left'?'selected':'')+'>Панорама влево</option><option value="pan-right" '+(c.motion==='pan-right'?'selected':'')+'>Панорама вправо</option><option value="pan-up" '+(c.motion==='pan-up'?'selected':'')+'>Панорама вверх</option><option value="float" '+(c.motion==='float'?'selected':'')+'>Лёгкое движение</option><option value="static" '+(c.motion==='static'?'selected':'')+'>Почти статично</option></select><select data-clip-duration="'+i+'">'+[3,4,5,6,8,10].map(v=>'<option value="'+v+'" '+(Number(c.duration)===v?'selected':'')+'>'+v+' секунд</option>').join('')+'</select></div><div class="clip-actions"><button class="btn" data-clip-up="'+i+'" '+(i===0?'disabled':'')+'>↑</button><button class="btn" data-clip-down="'+i+'" '+(i===motionClips.length-1?'disabled':'')+'>↓</button><button class="btn" data-clip-delete="'+i+'">×</button></div></div>').join('');
+  document.querySelectorAll('[data-clip-motion]').forEach(el=>el.onchange=()=>{motionClips[Number(el.dataset.clipMotion)].motion=el.value;drawMotionFrame(0)});
+  document.querySelectorAll('[data-clip-duration]').forEach(el=>el.onchange=()=>{motionClips[Number(el.dataset.clipDuration)].duration=Number(el.value);renderMotionClips();drawMotionFrame(0)});
+  document.querySelectorAll('[data-clip-up]').forEach(el=>el.onclick=()=>moveMotionClip(Number(el.dataset.clipUp),-1));
+  document.querySelectorAll('[data-clip-down]').forEach(el=>el.onclick=()=>moveMotionClip(Number(el.dataset.clipDown),1));
+  document.querySelectorAll('[data-clip-delete]').forEach(el=>el.onclick=()=>removeMotionClip(Number(el.dataset.clipDelete)));
+  drawMotionFrame(0);
+}
+function moveMotionClip(i,delta){const j=i+delta;if(j<0||j>=motionClips.length)return;[motionClips[i],motionClips[j]]=[motionClips[j],motionClips[i]];renderMotionClips()}
+function removeMotionClip(i){const c=motionClips.splice(i,1)[0];if(c&&c.url)URL.revokeObjectURL(c.url);renderMotionClips()}
+$('motionFiles').onchange=async e=>{const files=Array.from(e.target.files||[]).filter(f=>/^image\/(png|jpeg|webp)$/.test(f.type));if(!files.length){toast('Выбери PNG, JPG или WEBP');return}for(const file of files){const url=URL.createObjectURL(file),img=new Image();img.src=url;try{await img.decode();motionClips.push({name:file.name,url,img,duration:4,motion:'zoom-in'})}catch(err){URL.revokeObjectURL(url)}}renderMotionClips();$('motionStatus').className='status ok';$('motionStatus').textContent='Изображения добавлены. Настрой движение и нажми «Предпросмотр».';e.target.value=''};
+function stopMotionPreview(){if(motionRaf)cancelAnimationFrame(motionRaf);motionRaf=null;$('motionStop').disabled=true;$('motionPlay').disabled=false}
+function playMotion(){if(!motionClips.length){toast('Сначала добавь изображения');return}if(motionRecorder&&motionRecorder.state==='recording')return;stopMotionPreview();const {total}=motionStarts();motionPreviewStart=performance.now();$('motionPlay').disabled=true;$('motionStop').disabled=false;$('motionStatus').className='status';$('motionStatus').textContent='Идёт предпросмотр…';const tick=now=>{const t=(now-motionPreviewStart)/1000;drawMotionFrame(t);if(t>=total){drawMotionFrame(total);stopMotionPreview();$('motionStatus').className='status ok';$('motionStatus').textContent='Предпросмотр завершён.';return}motionRaf=requestAnimationFrame(tick)};motionRaf=requestAnimationFrame(tick)}
+function exportMotion(){
+  if(!motionClips.length){toast('Сначала добавь изображения');return}
+  if(!window.MediaRecorder||!motionCanvas.captureStream){$('motionStatus').className='status bad';$('motionStatus').textContent='Этот браузер не поддерживает запись canvas. Открой AniMotion в актуальном Chrome или Edge.';return}
+  stopMotionPreview();motionSize();const {total}=motionStarts(),fps=Number($('motionFps').value)||30;
+  const stream=motionCanvas.captureStream(fps);const types=['video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm'];const mime=types.find(t=>MediaRecorder.isTypeSupported(t));
+  try{motionRecorder=new MediaRecorder(stream,mime?{mimeType:mime,videoBitsPerSecond:6500000}:{videoBitsPerSecond:6500000})}catch(err){$('motionStatus').className='status bad';$('motionStatus').textContent='Не удалось запустить видеозапись: '+err.message;stream.getTracks().forEach(t=>t.stop());return}
+  motionChunks=[];motionExportStart=performance.now();drawMotionFrame(0);motionRecorder.ondataavailable=e=>{if(e.data&&e.data.size)motionChunks.push(e.data)};
+  motionRecorder.onstop=()=>{if(motionExportTimer)clearInterval(motionExportTimer);motionExportTimer=null;stream.getTracks().forEach(t=>t.stop());const blob=new Blob(motionChunks,{type:motionRecorder.mimeType||'video/webm'});if(motionBlobUrl)URL.revokeObjectURL(motionBlobUrl);motionBlobUrl=URL.createObjectURL(blob);const host=$('motionResult');host.innerHTML='';const video=document.createElement('video');video.src=motionBlobUrl;video.controls=true;host.append(video);const a=document.createElement('a');a.href=motionBlobUrl;a.download='animotion-youtube-video.webm';a.className='btn primary';a.textContent='Скачать видео WebM';host.append(a);$('motionStatus').className='status ok';$('motionStatus').textContent='Экспорт завершён · '+(blob.size/1024/1024).toFixed(1)+' МБ. Видео готово для просмотра и загрузки на YouTube.';$('motionExport').disabled=false;$('motionStop').disabled=true};
+  motionRecorder.start(300);$('motionExport').disabled=true;$('motionStop').disabled=false;$('motionStatus').className='status';$('motionStatus').textContent='Записываю видео. Не закрывай вкладку до завершения экспорта.';const tickMs=1000/fps;
+  motionExportTimer=setInterval(()=>{const elapsed=(performance.now()-motionExportStart)/1000;drawMotionFrame(elapsed);if(elapsed>=total){clearInterval(motionExportTimer);motionExportTimer=null;drawMotionFrame(total);motionRecorder.stop()}},tickMs);
+}
+$('motionPlay').onclick=playMotion;$('motionStop').onclick=()=>{stopMotionPreview();if(motionRecorder&&motionRecorder.state==='recording')motionRecorder.stop()};$('motionExport').onclick=exportMotion;
+['motionRatio','motionTransition'].forEach(id=>$(id).onchange=()=>{motionSize();renderMotionClips()});
+['motionTitle','motionCaption','motionTitleSize'].forEach(id=>$(id).oninput=()=>drawMotionFrame(0));
+
 load();
+motionSize();
+renderMotionClips();
 })();
 </script>
 </body></html>
