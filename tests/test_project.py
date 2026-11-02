@@ -53,7 +53,7 @@ class ProjectFilesTest(unittest.TestCase):
         self.assertIn("Download ZIP", readme)
         self.assertIn("start-animotion.bat", readme)
         self.assertIn("публичный", readme.lower())
-        self.assertIn("нет гарантированного неограниченного бесплатного api", readme.lower())
+        self.assertIn("не обещает бесплатное неограниченное text-to-video", readme.lower())
 
 
 if __name__ == "__main__":
