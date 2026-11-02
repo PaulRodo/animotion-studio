@@ -4,6 +4,16 @@
 
 > Профиль компьютера: NVIDIA GeForce RTX 2050, 4 ГБ выделенной видеопамяти. Поэтому первым рабочим инструментом выбрана лёгкая анимация изображений, а не text-to-video диффузия.
 
+## Открыть AniMotion в интернете
+
+После первого включения GitHub Pages приложение будет доступно по адресу:
+
+https://paulrodo.github.io/animotion-studio/
+
+Чтобы включить публикацию один раз: открой Settings → Pages → Build and deployment → Source и выбери **GitHub Actions**. Затем открой Actions и дождись успешного задания **Deploy AniMotion Studio to GitHub Pages**. Последующие изменения `index.html` будут публиковаться автоматически.
+
+Онлайн-версия предназначена для браузерного Motion Lab (сборка WebM из изображений). Вкладка ComfyUI/ИИ не может обратиться к прокси на твоём компьютере через GitHub Pages; для этого скачай ZIP и запусти `start-animotion.bat`.
+
 ## Как открыть AniMotion на Windows
 
 1. Открой репозиторий https://github.com/PaulRodo/animotion-studio.
