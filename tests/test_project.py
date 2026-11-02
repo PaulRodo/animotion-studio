@@ -5,19 +5,31 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ProjectFilesTest(unittest.TestCase):
-    def test_html_and_server_exist(self):
-        self.assertTrue((ROOT / "index.html").is_file())
-        self.assertTrue((ROOT / "run_server.py").is_file())
+    def test_required_files_exist(self):
+        for path in ("index.html", "run_server.py", "README.md", "start-animotion.bat"):
+            self.assertTrue((ROOT / path).is_file(), path)
 
-    def test_no_heavy_wan_start_recommendation(self):
+    def test_motion_lab_available(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("RTX 2050", html)
-        self.assertNotIn("выбери <b>Wan 2.2 5B Video Generation</b>", html)
+        self.assertIn('id="screen-motion"', html)
+        self.assertIn('id="motionCanvas"', html)
+        self.assertIn("MediaRecorder", html)
+        self.assertIn("captureStream", html)
+        self.assertIn("animotion-youtube-video.webm", html)
 
-    def test_hardware_guide_mentions_vram_limit(self):
+    def test_low_vram_guidance_present(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
         guide = (ROOT / "docs" / "HARDWARE.md").read_text(encoding="utf-8")
+        self.assertIn("RTX 2050", html)
         self.assertIn("4 GB", guide)
         self.assertIn("LivePortrait", guide)
+        self.assertNotIn("выбери <b>Wan 2.2 5B Video Generation</b>", html)
+
+    def test_readme_explains_how_to_open(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("Download ZIP", readme)
+        self.assertIn("start-animotion.bat", readme)
+        self.assertIn("Private", readme)
 
 
 if __name__ == "__main__":
